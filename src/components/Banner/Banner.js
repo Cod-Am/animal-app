@@ -1,6 +1,7 @@
 import React from 'react';
 import './Banner.css';
 import tigerImage from './img/Tiger.png';
+import './Animations.css'
 
 const Banner = () => {
   return (
@@ -31,7 +32,7 @@ const Banner = () => {
           </div> */}
       </div>
 
-      <div><img src={tigerImage} alt='' className='image' /></div>
+      <div><img src={tigerImage} alt='' className='image slide-in-blurred-top' /></div>
       {/* Elephant */}
       {/* Zebra */}
     </div>
