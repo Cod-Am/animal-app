@@ -12,7 +12,7 @@
     margin-top: 5%;
     z-index: 2;
     position: relative;
-    left: -30%;
+    left: -28%;
     top: 80px;
 }
 .tiger {
@@ -55,13 +55,37 @@
 .status,.species{
     font-family: 'Century Gothic';
     letter-spacing: 5px;
+    font-size: small;
 }
-.staus_detail{
-
+.status_detail{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: large;
 }
 .status{
     margin-top: 10px;
 }
 .species{
     margin-bottom: 10px;
+}
+.text-with-line {
+    display: inline-flex;
+    align-items: center;
+  }
+  .line {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid white; 
+    width: 90%;
+  }
+.margin-status-hr{
+    margin-top: 20px;
+    margin-left: 5px;
+  }
+.margin-species-hr{
+    margin-bottom: 15px;
+    margin-left: 5px;
 }
