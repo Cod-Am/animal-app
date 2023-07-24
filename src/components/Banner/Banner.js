@@ -1,9 +1,27 @@
 import React from 'react';
 import './Banner.css';
 import tigerImage from './img/Tiger.png';
+import lionImage from './img/Lion.png';
+import leopardImage from './img/Leopard.png';
 import './Animations.css'
 
 const Banner = () => {
+  const animals=[{
+    Name:'Tiger',
+    Status:'Critically Endangered',
+    image:tigerImage
+  },
+  {
+    Name:'Lion',
+    Status:'Vulnerable',
+    image:lionImage
+  },
+  {
+    Name:'Leopard',
+    Status:'Vulnerable',
+    image:leopardImage
+  }
+]
   return (
     <div className='banner'>
       {/* Tiger */}
