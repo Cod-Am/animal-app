@@ -6,31 +6,42 @@
 }
 /* Tiger */
 .tiger_content{
+    color: white;
     display: flex;
     flex-direction: column;
     margin-top: 5%;
+    z-index: 2;
+    position: relative;
+    left: -30%;
+    top: 80px;
 }
 .tiger {
-    color: white;
-    font-size: xx-large;
+
+    font-size: 70px;
     font-weight: 311; /* Initial font weight (if needed, adjust this value to match the desired weight) */
     font-family: 'Gambetta', serif;
     text-transform: uppercase;
     transition: 700ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
-    letter-spacing: 0px;
-    }
+    letter-spacing: 5px;
+    width: 200px;
+}
   
 .tiger:hover {
     font-weight: 582; /* Font weight on hover (adjust this value as needed) */
-    letter-spacing: 3px;
+    letter-spacing: 10px;
     }
-.discription{
+/* .discription{
     color: rgb(101, 100, 100);
     width: 300px;
     font-size: smaller;
-}
+} */
 .image{
     margin-top: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
 }
 @keyframes image-animmation {
     from{
@@ -40,4 +51,17 @@
     to{
         opacity: 1;
     }
+}
+.status,.species{
+    font-family: 'Century Gothic';
+    letter-spacing: 5px;
+}
+.staus_detail{
+
+}
+.status{
+    margin-top: 10px;
+}
+.species{
+    margin-bottom: 10px;
 }
