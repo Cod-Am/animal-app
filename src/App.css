@@ -1,4 +1,4 @@
 body{
   background-color: black;
-  
+  background-image: -webkit-radial-gradient(50%,transparent,rgb(36, 31, 31));
 }
