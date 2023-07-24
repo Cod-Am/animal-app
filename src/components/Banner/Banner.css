@@ -5,7 +5,7 @@
     align-items:center;
 }
 /* Tiger */
-.tiger_content{
+.animal_content{
     color: white;
     display: flex;
     flex-direction: column;
@@ -14,22 +14,32 @@
     position: relative;
     left: -24%;
     top: 80px;
+    transform: skew(0deg);
+    transition: transform 0.5s;
 }
-.tiger {
+.animal_content:hover{
+    transform: skew(-14deg);
+}
+.animal {
 
     font-size: 70px;
     font-weight: 311; /* Initial font weight (if needed, adjust this value to match the desired weight) */
     font-family: 'Gambetta', serif;
     text-transform: uppercase;
-    transition: 700ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
-    letter-spacing: 5px;
     width: 200px;
+    text-shadow: 0px 0px 0px rgb(93, 93, 93);
+
+    letter-spacing: 4px;
+    /* Add transition for smooth animation */
+    transition: text-shadow 0.5s,  letter-spacing 0.5s;
 }
   
-.tiger:hover {
-    font-weight: 582; /* Font weight on hover (adjust this value as needed) */
-    letter-spacing: 10px;
-    }
+.animal:hover {
+    /* Set the final state of the text shadow and letter-spacing on hover */
+    text-shadow: 0px 4px 4px rgb(93, 93, 93);
+
+    letter-spacing: 12px;
+  }
 /* .discription{
     color: rgb(101, 100, 100);
     width: 300px;
@@ -37,9 +47,9 @@
 } */
 .image{
     margin-top: 5%;
-    position: absolute;
-    top: 3%;
-    left:30%;
+    position: fixed;
+    top: 50%;
+    left:50%;
     transform: translate(-50%,-50%);
     z-index: 1;
     height: 550px;
@@ -81,4 +91,15 @@
 .margin-species-hr{
     margin-bottom: 15px;
     margin-left: 5px;
+}
+.scrollbar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 50px;
+    top: 300px;
+    transform: translate(-50%, -50%);
+    color: rgb(112, 111, 111);
+    display: flex;
+    z-index: 3;
 }

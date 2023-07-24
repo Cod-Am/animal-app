@@ -25,4 +25,7 @@
     height: 40px;
     background-color: black;
     align-items: center;
+    height: 3rem;
+    z-index: 3;background-image: linear-gradient(to bottom, transparent,rgb(24, 24, 24));
+    backdrop-filter: blur(10px);
 }

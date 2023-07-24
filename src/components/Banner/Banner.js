@@ -1,31 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Banner.css';
 import tigerImage from './img/Tiger.png';
 import lionImage from './img/Lion.png';
 import leopardImage from './img/Leopard.png';
 import './Animations.css'
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import CircleTwoToneIcon from '@mui/icons-material/CircleTwoTone';
+// import CircleIcon from '@mui/icons-material/Circle';
 
 const Banner = () => {
-  const animals=[{
-    Name:'Tiger',
-    Status:'Critically Endangered',
-    image:tigerImage
+
+  const animals = [{
+    Name: 'South China Tiger',
+    Status: 'Critically Endangered',
+    image: tigerImage
   },
   {
-    Name:'Lion',
-    Status:'Vulnerable',
-    image:lionImage
+    Name: 'Lion',
+    Status: 'Vulnerable',
+    image: lionImage
   },
   {
-    Name:'Leopard',
-    Status:'Vulnerable',
-    image:leopardImage
+    Name: 'Leopard',
+    Status: 'Vulnerable',
+    image: leopardImage
   }
-]
+  ]
+  // Functions
+  const [i, updateI] = useState(0)
+  const [isAnimated, setisAnimated] = useState(false)
+  const handlePreviousClick = () => {
+
+    if (i > 0) {
+      updateI(i - 1);
+      setisAnimated(true)
+      setTimeout(() => {
+        setisAnimated(false)
+      }, 600)
+    }
+  };
+  const handleNextClick = () => {
+    if (i < animals.length - 1) {
+      updateI(i + 1);
+      setisAnimated(true)
+      setTimeout(() => {
+        setisAnimated(false)
+      }, 600)
+    }
+  };
   return (
-    <div className='banner'>
-      {/* Tiger */}
-      <div className='tiger_content'>
+    <div className={`banner ${isAnimated ? 'slide-in-blurred-top' : ''}`}>
+
+      <div className='animal_content'>
         {/* Fixed Text:Species */}
         <span className='text-with-line'>
           <span className='species '>SPECIES</span>
@@ -33,7 +60,7 @@ const Banner = () => {
         </span>
 
         {/* Species Name */}
-        <div className='tiger'>South China Tiger</div>
+        <div className='animal'>{animals[i].Name}</div>
 
         {/* Fixed Text : Status */}
         <span className='text-with-line'>
@@ -42,7 +69,7 @@ const Banner = () => {
         </span>
 
         {/* Status of the species */}
-        <div className='status_detail'>Critically Endangered</div>
+        <div className='status_detail'>{animals[i].Status}</div>
 
         {/* Non functional Section */}
         {/* <div className='discription'>
@@ -50,9 +77,16 @@ const Banner = () => {
           </div> */}
       </div>
 
-      <div><img src={tigerImage} alt='' className='image slide-in-blurred-top' /></div>
-      {/* Elephant */}
-      {/* Zebra */}
+      <div><img src={animals[i].image} alt='' className='image' /></div>
+
+      {/* ScrollBar */}
+      <div className='scrollbar'>
+        <div className='arrow_button' onClick={handlePreviousClick}><KeyboardArrowUpIcon /></div>
+        <div><CircleTwoToneIcon /></div>
+        <div><CircleTwoToneIcon /></div>
+        <div><CircleTwoToneIcon /></div>
+        <div className='arrow_button' onClick={handleNextClick}><KeyboardArrowDownIcon /></div>
+      </div>
     </div>
   );
 };
