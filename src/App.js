@@ -4,8 +4,8 @@ import Nav from './components/navbar/Nav';
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Banner />
+      <div className='layer1'><Nav /></div>
+      <div className='layer2'><Banner /></div>
     </div>
   );
 }

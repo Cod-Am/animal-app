@@ -37,7 +37,7 @@ const Banner = () => {
       setisAnimated(true)
       setTimeout(() => {
         setisAnimated(false)
-      }, 600)
+      }, 700)
     }
   };
   const handleNextClick = () => {
@@ -46,12 +46,14 @@ const Banner = () => {
       setisAnimated(true)
       setTimeout(() => {
         setisAnimated(false)
-      }, 600)
+      }, 750)
     }
   };
   return (
-    <div className={`banner ${isAnimated ? 'slide-in-blurred-top' : ''}`}>
+    <div className='banner'>
 
+      
+      <div className={`encloser ${isAnimated ? 'puff-in-bottom ' : ''}`}>
       <div className='animal_content'>
         {/* Fixed Text:Species */}
         <span className='text-with-line'>
@@ -78,7 +80,7 @@ const Banner = () => {
       </div>
 
       <div><img src={animals[i].image} alt='' className='image' /></div>
-
+      </div>
       {/* ScrollBar */}
       <div className='scrollbar'>
         <div className='arrow_button' onClick={handlePreviousClick}><KeyboardArrowUpIcon /></div>

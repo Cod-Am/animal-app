@@ -1,24 +1,46 @@
+.puff-in-bottom {
+	-webkit-animation: puff-in-bottom 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-bottom 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+} 
 
-.slide-in-blurred-top {
-	        animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-}
-@keyframes slide-in-blurred-top {
+ @-webkit-keyframes puff-in-bottom {
         0% {
-          -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-                  transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-          -webkit-transform-origin: 50% 0%;
-                  transform-origin: 50% 0%;
-          -webkit-filter: blur(40px);
-                  filter: blur(40px);
+          -webkit-transform: scale(2);
+                  transform: scale(2);
+          -webkit-transform-origin: 50% 100%;
+                  transform-origin: 50% 100%;
+          -webkit-filter: blur(4px);
+                  filter: blur(4px);
           opacity: 0;
         }
         100% {
-          -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-                  transform: translateY(0) scaleY(1) scaleX(1);
-          -webkit-transform-origin: 50% 50%;
-                  transform-origin: 50% 50%;
-          -webkit-filter: blur(0);
-                  filter: blur(0);
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-transform-origin: 50% 100%;
+                  transform-origin: 50% 100%;
+          -webkit-filter: blur(0px);
+                  filter: blur(0px);
           opacity: 1;
         }
       }
+      @keyframes puff-in-bottom {
+        0% {
+          -webkit-transform: scale(2);
+                  transform: scale(2);
+          -webkit-transform-origin: 50% 100%;
+                  transform-origin: 50% 100%;
+          -webkit-filter: blur(4px);
+                  filter: blur(4px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-transform-origin: 50% 100%;
+                  transform-origin: 50% 100%;
+          -webkit-filter: blur(0px);
+                  filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      

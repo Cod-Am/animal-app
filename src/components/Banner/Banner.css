@@ -46,9 +46,9 @@
     font-size: smaller;
 } */
 .image{
-    margin-top: 5%;
+
     position: fixed;
-    top: 50%;
+    top: 60%;
     left:50%;
     transform: translate(-50%,-50%);
     z-index: 1;
@@ -82,7 +82,7 @@
     top: 50%;
     transform: translateY(-50%);
     border: 1px solid white; 
-    width: 90%;
+    width: 30%;
   }
 .margin-status-hr{
     margin-top: 20px;
@@ -102,4 +102,7 @@
     color: rgb(112, 111, 111);
     display: flex;
     z-index: 3;
+}
+.encloser{
+    width: 100vb;
 }
